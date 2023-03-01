@@ -1,0 +1,25 @@
+### 注册用户
+POST http://localhost:8080/api/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "abc",
+  "password": "123"
+}
+
+### 登录获取token
+POST http://localhost:8080/api/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "lisi",
+  "password": "123"
+}
+
+### 测试jwt中间件
+GET http://localhost:8080/api/list
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzc2ODY4NDIsImlkIjoyLCJvcmlnX2lhdCI6MTY3NzY4MzI0MiwidXNlcm5hbWUiOiJsaXNpIn0.VRYMgYhlDYbayKyf_4rZx4PiZ9LKzGDhJkeysbDLK4U
